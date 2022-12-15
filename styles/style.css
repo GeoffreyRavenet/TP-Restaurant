@@ -1,16 +1,17 @@
+/* -------- Partie init default val -------- */
 *, *::before{
     box-sizing: border-box;
 }
 
 html{
     font-size: 10px;
-    
 }
 
 body{
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.625;
     margin: 0;
+    color: #6f6f6f;
 }
 a {
     color: inherit;
@@ -18,6 +19,11 @@ a {
     transition: color .3s;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* -------- Partie Topbar -------- */
 .header{
     background: 
         linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
@@ -82,7 +88,71 @@ a {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+/* -------- Partie blog presentation  -------- */
+.home-section{
+    padding-top: 5px;
+}
+.container-small{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 960px;
+}
 
+.block{
+    margin-bottom: 50px;
+}
+
+.title{
+    /* 28px / 16px */
+    font-size: 1.75rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0 0 0;
+}
+
+.title::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: #C89446;
+    margin-bottom: .5rem;
+}
+.title span{
+    font-family: 'Pinyon Script', serif;
+    font-size: 2.5rem;
+    color: #C89446;
+    display: block;
+    text-transform: none;
+}
+
+.more{
+    color: #C89446;
+}
+.more:hover{
+    text-decoration: underline;
+}
+.more::after{
+    content: ' >';
+}
+.block-img{
+    max-width: 350px;
+    margin: 0 auto;
+    border: solid 1px #C89446;
+}
+.block-img{
+    display: block;
+}
+.block-img img{
+    position: relative;
+    z-index: 1;
+}
+.block-center{
+    text-align: center;
+}
 @media only screen and (min-width: 600px){
     html{
         font-size: 16px;
@@ -117,6 +187,71 @@ a {
     .baseline-slogan{
         font-size: 1.5rem;
         letter-spacing: 4px;
+    }
+
+}
+
+@media only screen and (min-width:800px){
+    .block{
+        margin-bottom: 100px;
+    }
+    .block-left, .block-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .block-img{
+        border: none;
+        position: relative;
+        /*flex: none;*/
+    }
+    .block-left .block-body, .block-right .block-body{
+        width: 445px;
+        flex: none;
+    }
+    .block-left .block-img{
+        margin-left: 30px;
+    }
+    .block-img::before{
+        content: '';
+        display: block;
+        border: solid 1px #C89446;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .block-left .block-body{
+        margin-left: 20px;
+    }
+    .block-right .block-img::before{
+        left: auto;
+        right: -30px;
+    }
+    .block-right .block-img{
+        margin-right: 30px;
+    }
+    .block-right .block-body{
+        margin-right: 20px;
+        order: -1;
+    }
+    .title{
+        margin-bottom: 1.2rem;
+    }
+    .title::before{
+        margin-bottom: 10px;
+    }
+    .more{
+        display: block;
+        margin-top: 1.3rem;
+    }
+    .home-section{
+        background: 
+        top 95px right 0 url(../img/oranges.jpg) no-repeat,
+        top 640px left 0 url(../img/spices.jpg) no-repeat;
     }
 
 }
