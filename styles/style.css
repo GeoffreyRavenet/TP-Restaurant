@@ -354,6 +354,24 @@ select option {
     height: 460px;
 }
 
+/*---- Partie Footer ----*/
+
+.footer{
+    background: #383838 bottom right no-repeat;
+    color:#FFF;
+    font-weight: 300;
+    padding: 40px 0;
+}
+.footer-title{
+    color: #C89446;
+    margin-bottom: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.footer-column{
+    margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 600px){
     html{
         font-size: 16px;
@@ -572,4 +590,38 @@ select option {
         padding-bottom: 0;
     }
 
+    .footer{
+        background-image: url(../img/splash.png);
+    }
+    .footer-columns{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-column{
+        width: 290px;
+        margin-right: 50px;
+    }
+    .footer-column:first-child{
+        width: 450px;
+    }
+    .footer-column:last-child{
+        margin-right: 0;
+        flex: none;
+    }
+    .footer a{
+        text-decoration: underline;
+    }
+    .footer ul{
+        padding-left: 0;
+        list-style: none;
+    }
+    .footer ul::before{
+        content: '- ';
+    }
+    .footer-credits span{
+        font-size: .913em;
+    }
+    .footer-credits span{
+        font-weight: bold;
+    }
 }
