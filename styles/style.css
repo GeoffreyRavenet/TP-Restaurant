@@ -306,7 +306,9 @@ select option {
 .recipes{
     padding: 50px 0;
     background: url(../img/news-bg.jpg) top left /80vm auto no-repeat;
-
+}
+.recipes a:hover{
+    text-decoration: underline;
 }
 .recipes .more{
    display: block;
@@ -371,6 +373,66 @@ select option {
 .footer-column{
     margin-bottom: 2rem;
 }
+
+
+/*####### Page recipe1 #######*/
+.section-overflow{
+    padding: 20px 0;
+}
+.block-ingredients{
+    border: 1px solid #C89446;
+    padding: 35px 20px;
+    font-weight: 600;
+}
+
+.block-ingredients ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.block-ingredients li{
+    padding: 5px 0;
+}
+.block-ingredients span{
+    color:#C89446;
+    width: 35px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: 300;
+}
+.block-video{
+    text-align: center;
+    position: relative;
+    background: #1C1C1C;
+    display: block;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.block-video img{
+    box-shadow: 0 0 30px rgba(128, 128, 128, .5);
+    opacity: .6;
+    display: block;
+    transition: opacity .3s;
+}
+.block-video::after{
+    content: '';
+    background: url(../img/play.png) center center no-repeat;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: calc(50% - 31px);
+    left: calc(50% - 31px);
+    transition: transform .3s;
+}
+.block-video:hover::after{
+   transform: scale(1.2);
+}
+.block-video:hover img{
+    opacity: .8;
+ }
 
 @media only screen and (min-width: 600px){
     html{
@@ -615,7 +677,7 @@ select option {
         padding-left: 0;
         list-style: none;
     }
-    .footer ul::before{
+    .footer li::before{
         content: '- ';
     }
     .footer-credits span{
@@ -623,5 +685,24 @@ select option {
     }
     .footer-credits span{
         font-weight: bold;
+    }
+
+    /*####### Page recipe1 #######*/
+    .section-overflow{
+        padding: 0;
+        margin-top: -20px;
+    }
+    .block-ingredients{
+       width: 350px;
+        padding: 35px 40px;
+    }
+    .block-ingredients li{
+        padding: 10px 0;
+    }
+    .block-ingredients span{
+        margin-right: 50px;
+    }
+    .block-right .block-video{
+        margin-left: 28px;
     }
 }
