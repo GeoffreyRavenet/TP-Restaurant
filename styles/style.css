@@ -434,6 +434,38 @@ select option {
     opacity: .8;
  }
 
+ .recipe-mosaic p {
+    margin-top: 0;
+    margin-bottom: .5rem;
+ }
+ .recipe-mosaic .more {
+    margin-top: .5rem;
+ }
+ .pagination{
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+ }
+ .pagination li{
+    display: inline-block;
+ }
+ .pagination a{
+    border: 1px solid #C89446;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    text-indent: -3000px;
+    transition: background-color .3s;
+    margin: 0 10px;
+ }
+ .pagination .active, .pagination a:hover{
+    background: #C89446;
+ }
+
+
 @media only screen and (min-width: 600px){
     html{
         font-size: 16px;
@@ -554,14 +586,17 @@ select option {
         margin-bottom: 110px;
         width: calc(50% - 40px);
     }
-    .menu-summary-item:nth-child(even){
+    .menu-summary .menu-summary-item:nth-child(even){
         text-align: right;
         padding-left: 0;
         padding-right: 192px;
     }
-    .menu-summary-item:nth-child(even) .menu-summary-img{
+    .menu-summary .menu-summary-item:nth-child(even) .menu-summary-img{
         left: auto;
         right: 0;
+    }
+    .menu-summary .menu-summary-item:nth-child(even) .menu-summary-price{
+        margin-left: auto;
     }
     .menu-summary-img{
         width: 160px;
@@ -579,9 +614,7 @@ select option {
         width: 85px;
         background: #FFF;
     }
-    .menu-summary-item:nth-child(even) .menu-summary-price{
-        margin-left: auto;
-    }
+    
     .menu-summary::before{
         content: '';
         position: absolute;
@@ -704,5 +737,23 @@ select option {
     }
     .block-right .block-video{
         margin-left: 28px;
+    }
+    .recipe-mosaic{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: -60px;
+    }
+    .recipe-mosaic .menu-summary-item{
+        width: calc(50% - 25px);
+        padding-left: 150px;
+        margin-bottom: 60px;
+        font-size: .875rem;
+    }
+    .recipe-mosaic .menu-summary-img{
+        width: 125px;
+    }
+    .pagination{
+        margin: 60px 0;
     }
 }
